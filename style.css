@@ -3,13 +3,13 @@ body {
     background-color: #f4f4f9;
     color: #333;
     margin: 0;
-    padding-top: 80px; /* ヘッダーの高さ分 */
+    padding-top: 70px; /* ヘッダーの高さ分 */
 }
 
 header {
     background-color: #007bff;
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
     position: fixed;
     top: 0;
@@ -21,18 +21,18 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 main {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 10px;
 }
 
 #setup-screen, #timer-screen {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -56,13 +56,14 @@ label {
     color: #555;
 }
 
-input[type="number"], textarea {
+select, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
+    background-color: white;
 }
 
 textarea {
@@ -87,7 +88,7 @@ button:hover {
 }
 
 #timer-display {
-    font-size: 72px;
+    font-size: clamp(48px, 20vw, 72px);
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
@@ -124,4 +125,45 @@ pre {
     font-family: inherit;
     font-size: 16px;
     margin: 0;
+}
+
+/* スマートフォン向けのスタイル */
+@media (max-width: 480px) {
+    body {
+        padding-top: 60px;
+    }
+
+    header {
+        padding: 12px 0;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #setup-screen, #timer-screen {
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #notification-area {
+        font-size: 16px;
+        min-height: 24px;
+    }
+
+    .display-group h2 {
+        font-size: 18px;
+    }
+
+    pre {
+        font-size: 14px;
+    }
 }
