@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTGタイムキーパー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MTGタイムキーパー</h1>
+    </header>
+
+    <main>
+        <div id="setup-screen">
+            <div class="input-group">
+                <label for="meeting-time">MTG時間（分）:</label>
+                <input type="number" id="meeting-time" min="1" value="30">
+            </div>
+            <div class="input-group">
+                <label for="agenda">アジェンダ:</label>
+                <textarea id="agenda" rows="5"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="goal">ゴール:</label>
+                <textarea id="goal" rows="3"></textarea>
+            </div>
+            <button id="start-btn">スタート</button>
+        </div>
+
+        <div id="timer-screen" style="display: none;">
+            <div id="timer-display">00:00</div>
+            <div id="notification-area"></div>
+            <div class="display-group">
+                <h2>アジェンダ</h2>
+                <pre id="display-agenda"></pre>
+            </div>
+            <div class="display-group">
+                <h2>ゴール</h2>
+                <pre id="display-goal"></pre>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
